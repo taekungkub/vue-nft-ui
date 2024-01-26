@@ -18,22 +18,22 @@
         </div>
         <p class="font-bold text-sm">{{ props.item?.title }} {{ props.item?.id }}</p>
       </div>
-      <div class="flex items-center gap-1">
+      <div class="hidden sm:flex items-center gap-1">
         <span class="font-medium text-sm"> {{ props.item?.eatimated_price }} </span>
         <IconInfo />
       </div>
-      <div class="flex items-center gap-1">
+      <div class="hidden sm:flex items-center gap-1">
         <span class="font-medium text-sm">
           {{ props.item?.floor_price }}
         </span>
         <IconInfo />
       </div>
-      <div class="flex items-center gap-1">
+      <div class="hidden sm:flex items-center gap-1">
         <span class="font-medium text-sm">
           {{ props.item?.acquisition_price }}
         </span>
       </div>
-      <div class="text-sm">{{ props.item?.acquisition_date }}</div>
+      <div class="hidden sm:flex text-sm">{{ props.item?.acquisition_date }}</div>
       <div>
         <button class="border p-1.5 px-2.5 rounded-lg">
           <img
