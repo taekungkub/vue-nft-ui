@@ -11,15 +11,19 @@
       <div class="flex gap-3 items-center">
         <div>
           <img
-            src="https://i.seadn.io/gcs/files/14499fc3a2f0862372157963c75880e5.png?auto=format&dpr=1&w=48"
+            :src="props.item?.image"
             class="w-full block mx-auto rounded-2xl max-w-[55px]"
             alt=""
           />
         </div>
-        <p class="font-bold text-sm">{{ props.item?.title }} {{ props.item?.id }}</p>
+        <p class="font-bold text-sm">
+          {{ props.item?.title }} {{ props.item?.id }}
+        </p>
       </div>
       <div class="hidden sm:flex items-center gap-1">
-        <span class="font-medium text-sm"> {{ props.item?.eatimated_price }} </span>
+        <span class="font-medium text-sm">
+          {{ props.item?.eatimated_price }}
+        </span>
         <IconInfo />
       </div>
       <div class="hidden sm:flex items-center gap-1">
@@ -33,7 +37,9 @@
           {{ props.item?.acquisition_price }}
         </span>
       </div>
-      <div class="hidden sm:flex text-sm">{{ props.item?.acquisition_date }}</div>
+      <div class="hidden sm:flex text-sm">
+        {{ props.item?.acquisition_date }}
+      </div>
       <div>
         <button class="border p-1.5 px-2.5 rounded-lg">
           <img
@@ -48,12 +54,12 @@
 </template>
 
 <script setup lang="ts">
-import { IData } from "../constant/data"
-import IconInfo from "./Icons/IconInfo.vue"
+import { IData } from "../constant/data";
+import IconInfo from "./Icons/IconInfo.vue";
 
 const props = defineProps({
   item: Object as () => IData,
-})
+});
 </script>
 
 <style scoped></style>
