@@ -16,29 +16,34 @@
             alt=""
           />
         </div>
-        <p class="font-bold text-sm">
+        <p class="font-bold text-xs">
           {{ props.item?.title }} {{ props.item?.id }}
         </p>
       </div>
       <div class="hidden sm:flex items-center gap-1">
-        <span class="font-medium text-sm">
-          {{ props.item?.eatimated_price }}
+        <span class="font-bold text-xs">
+          Ξ{{ props.item?.eatimated_price }}
         </span>
         <IconInfo />
       </div>
       <div class="hidden sm:flex items-center gap-1">
-        <span class="font-medium text-sm">
-          {{ props.item?.floor_price }}
-        </span>
+        <span class="font-bold text-xs"> Ξ{{ props.item?.floor_price }} </span>
         <IconInfo />
       </div>
       <div class="hidden sm:flex items-center gap-1">
-        <span class="font-medium text-sm">
-          {{ props.item?.acquisition_price }}
+        <span
+          class="font-bold text-xs"
+          :class="{
+            'text-[#bfbfc9]': Number(props.item?.acquisition_price) <= 0,
+          }"
+        >
+          Ξ{{ props.item?.acquisition_price }}
         </span>
       </div>
-      <div class="hidden sm:flex text-sm">
-        {{ props.item?.acquisition_date }}
+      <div class="hidden sm:flex text-xs">
+        <span class="text-xs font-bold">
+          {{ props.item?.acquisition_date }}</span
+        >
       </div>
       <div>
         <button class="border p-1.5 px-2.5 rounded-lg">

@@ -14,15 +14,15 @@
 
       <GalleryInfo>
         <template #title>Eatimated Price</template>
-        <template #default> {{ props.item?.eatimated_price }} </template>
+        <template #default>Ξ{{ props.item?.eatimated_price }} </template>
       </GalleryInfo>
       <GalleryInfo>
         <template #title>Floor Price</template>
-        <template #default> {{ props.item?.floor_price }} </template>
+        <template #default>Ξ{{ props.item?.floor_price }} </template>
       </GalleryInfo>
-      <GalleryInfo>
+      <GalleryInfo :disabled="Number(props.item?.acquisition_price) <= 0">
         <template #title>Acquisition Price</template>
-        <template #default> {{ props.item?.acquisition_price }} </template>
+        <template #default>Ξ{{ props.item?.acquisition_price }} </template>
       </GalleryInfo>
       <GalleryInfo hidden>
         <template #title>Acquisition Date</template>
